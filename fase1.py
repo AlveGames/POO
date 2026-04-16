@@ -57,3 +57,13 @@ print("--------------------------------------------------------------------")
 # print(procesar_pago(100))
 #-------------------------------------------------------------------------------
 #mi codigo:
+def calcularpago(valor):
+    def porcentajeiva():
+        return valor * 0.15
+    
+    totalfinal = valor + porcentajeiva()
+
+    return f"lo que tenes que pagar con todo es {totalfinal}"
+
+print(calcularpago(100))
+print ("----------------------------------------------------------------------------------")
