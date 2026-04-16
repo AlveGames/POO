@@ -67,3 +67,53 @@ def calcularpago(valor):
 
 print(calcularpago(100))
 print ("----------------------------------------------------------------------------------")
+print ("---------------------------ejercicio final----------------------------------------")
+print ("----------------------------------------------------------------------------------")
+#codigo dado por gemini:
+# # Función 1: Solo calcula el impuesto
+# def calcular_iva(precio):
+#     iva = precio * 0.15  # <--- Usamos 0.15 para el 15%
+#     return iva           # <--- El "jugo" sale de la licuadora
+
+# # Función 2: Usa la anterior para mostrar el total
+# def imprimir_factura(producto, precio):
+#     # Llamamos a la función de arriba y guardamos su "return"
+#     impuesto_calculado = calcular_iva(precio) 
+    
+#     total = precio + impuesto_calculado
+    
+#     # Usamos la 'f' para que aparezcan los resultados [cite: 122, 124]
+#     print(f"--- FACTURA ---")
+#     print(f"Producto: {producto}")
+#     print(f"Precio base: ${precio}")
+#     print(f"IVA (15%): ${impuesto_calculado}")
+#     print(f"Total a pagar: ${total}")
+
+# # Prueba tu código así:
+# imprimir_factura("Laptop", 1000)
+#-------------------------------------------------------------------------------------------
+#ejercicio final:
+#El Reto: El Consultor de Sueldos
+#Imagina que vas a trabajar como programador. Tu contrato dice un sueldo bruto, pero te descuentan salud y te dan un bono por transporte.
+#Tu misión es crear una función llamada generar_recibo(nombre, sueldo_bruto) que:
+#Tenga una función interna llamada calcular_descuentos() que:
+# Calcule el 9% del sueldo_bruto (por salud y pensiones).
+# Retorne ese valor de descuento.
+# Tenga otra función interna llamada calcular_bono() que:
+# Retorne un valor fijo de $50 por bono de alimentación.
+# Calcule el total final: sueldo_bruto - descuentos + bono.
+# Use una F-string para imprimir un recibo profesional.
+#------------------------------------------------------------------------------------------
+def generar_recibo(nombre, sueldo_bruto):
+    def calcular_descuentos():
+        descuento = sueldo_bruto * 0.09
+        return descuento
+    
+    def calcular_bono():
+        bono= 50
+        return bono
+    
+    total_finalfinal = sueldo_bruto - calcular_descuentos() + calcular_bono()
+    
+    return f"estimado/a {nombre} su sueldo neto es de {total_finalfinal}"
+print(generar_recibo("sebas", 1500))
