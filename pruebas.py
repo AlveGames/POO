@@ -1,6 +1,9 @@
-class celular():
-    marca = "sansung"
-    modelo = "A10c"
-    camara = "50mp"
+import json
+usuario = {
+    "nom" : "sebas",
+}
 
-print(celular.modelo)
+with open("perfil.json", "w") as creararchivo:
+    json.dump(usuario,creararchivo)
+
+print("se guardo el perfil")
