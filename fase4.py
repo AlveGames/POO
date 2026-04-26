@@ -83,3 +83,4 @@ with open("perfil.json", "r") as creararchivo:
 
     print("datos recuperados existosamente...")
     print(datos_recuperados.ver_info())
+#creo que quedo perfecto
