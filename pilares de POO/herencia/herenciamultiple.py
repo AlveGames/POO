@@ -81,3 +81,55 @@ batman = murcielago()
 
 batman.amamantar()
 batman.volar()
+print("_________________________________________________________________________")
+print("")
+print("")
+# 🎮 Reto: "El Guerrero Tecnológico"
+# Imagina que estás desarrollando un juego donde existen Guerreros y Científicos.
+#  Ahora quieres crear una clase especial llamada Cyborg que herede las habilidades de ambos.
+# Instrucciones para tu VS Code:
+# Clase Guerrero:
+# Constructor: Recibe fuerza.
+# Método atacar(): Imprime "Atacando con una fuerza de [fuerza]...".
+# Clase Cientifico:
+# Constructor: Recibe habilidad_ia.
+# Método analizar(): Imprime "Analizando datos con nivel de IA: [habilidad_ia]...".
+# Clase Cyborg:
+# Debe heredar de Guerrero y Cientifico.
+# Constructor: Debe recibir nombre, fuerza y habilidad_ia.
+# Crucial: Llama manualmente a los constructores de los padres:
+# Guerrero.__init__(self, fuerza)
+# Cientifico.__init__(self, habilidad_ia)
+# Método presentarse(): Usa una f-string que diga:
+#  "Hola, soy el Cyborg [nombre]. Mi fuerza es [fuerza] y mi IA es de nivel [habilidad_ia]".
+
+class guerrero():
+    def __init__(self,fuerza):
+        self.fuerza = fuerza
+
+
+    def atacar(self):
+        print(f"Atacando con una fuerza de{self.fuerza}...")
+    def defensa(self):
+        print(f"defiendo con {self.resistencia} de resistencia")
+
+class cientifico():
+    def __init__(self,habilidad_ia):
+        self.habilidad_ia = habilidad_ia
+
+    def analizar(self):
+        print(f"Analizando datos con nivel de IA: {self.habilidad_ia}")
+
+class ciborg():
+    def __init__(self, fuerza, habilidad_ia,nombre):
+        guerrero.__init__(self,fuerza)
+        cientifico.__init__(self,habilidad_ia)
+        self.nombre = nombre
+    def presentarse(self):
+        print(f"Hola, soy el Cyborg {self.nombre}. Mi fuerza es {self.fuerza} y mi IA es de nivel {self.habilidad_ia}")
+
+
+ciborg1 = ciborg("paladino",100,500)
+
+ciborg1.presentarse()
+print("")
